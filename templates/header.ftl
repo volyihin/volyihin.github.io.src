@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title><#if (content.title)??><#escape x as x?xml>${content.title}</#escape><#else>Mike McGarr</#if></title>
+    <title><#if (content.title)??><#escape x as x?xml>${content.title}</#escape><#else>Volyihin</#if></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The personal blog of J. Michael McGarr, professional automation rant monger.  Passionate about #devops #continuousDelivery #lean #agile">
-    <meta name="author" content="https://twitter.com/SonOfGarr">
+    <meta name="description" content="The personal blog of volyihin, professional java developer.  Passionate about #java #groovy #angularjs #web">
+    <meta name="author" content="https://twitter.com/volyihin">
     <meta name="keywords" content="">
     <meta name="generator" content="JBake">
 
@@ -31,7 +31,7 @@
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-49993013-1']);
+  _gaq.push(['_setAccount', 'UA-52030708-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {
