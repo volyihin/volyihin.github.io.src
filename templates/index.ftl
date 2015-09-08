@@ -1,63 +1,62 @@
 <#include "header.ftl">
-
-<#include "menu.ftl">
-
-<br><br>
-<!--
-	 <div class="page-header">
-	<center>
-			<img src="img/untitled.jpeg"/>
-		</center>
 	
-	</div>
--->	
-<br><br>
-<div class="container-fluid">
+	<#include "menu.ftl">
 
 	<div class="row-fluid">
-		<div class="col-lg-10">
-	<!-- <div class="col-sm-9"> -->
-		<#list posts as post>
-		<#if (post.status == "published")>
-		<div class="row">
-			<div class="col-lg-4 col-md-4 col-xs-1" >
-					<a href="${post.uri}">
-						<img src=${post.image} style="max-width:360px;max-height:270px;"/>
-					</a>
-			</div>
-			<div class="col-lg-8 col-md-8 col-xs-12">
-				<!-- <a href="${post.uri}"> -->
-					<h3><#escape x as x?xml>${post.title}</#escape></h3>
-				<!-- </a> -->
 
-				<#if post.eng??>
-				<a href="${post.eng}">English version</a>
-				</#if>	
-
-				<p><em>${post.date?string("dd-MM-yyyy")}</em></p>
-				<p>${post.summary}</p>
-				<a href="${post.uri}">Далее</a>
-
-			</div>
-	
-		</div>		
-		<br>	<br> <br>	
-
-
-		</#if>
-		</#list>
-
-		</div>
-		<div class="col-lg-2">
-		<#include "sidebar.ftl">
+		<div class="span2">
 		</div>
 
+		<div class="span8">
+			<div class="page-header">
+				<h1>Volyihin's Blog</h1>
+			</div>
+		</div>
 	</div>
-</div>
+	<div class="row-fluid">
 
-<hr />
+		<div class="span2">
+		</div>
 
+		<div class="span5">
+
+			<#list posts as post>
+		  		<#if (post.status == "published")>
+		  			<a href="${post.uri}"><h3><#escape x as x?xml>${post.title}</#escape></h3></a>
+		  			<p>${post.date?string("MMMM dd, yyyy")}</p>
+		  			<p>${post.summary}</p>
+
+		  		</#if>
+		  		<#if post_index = 5><#break></#if>
+		  	</#list>
+			
+			<hr />
+			
+			<p>Older posts are available in the <a href="/${config.archive_file}">archive</a>.</p>
+		</div>
+
+		<div class="span3">
+
+			<!-- <img src="img/profile_pic-sq.jpg" style="width:300px;height:266px"/>
+			<p>
+			Passionate engineer seeking to optimize development teams and organizations
+			</p>
+			<a href="http://www.mikemcgarr.com/feed.xml" target="_blank">
+			   <img src="img/webicon-rss.svg" alt="RSS Feed" style="width:42px;height:42px">
+			</a>
+			<a href="http://twitter.com/SonOfGarr" target="_blank">
+			   <img src="img/webicon-twitter.svg" alt="Twitter account" style="width:42px;height:42px">
+			</a>
+			<a href="http://github.com/jmcgarr" target="_blank">
+			   <img src="img/webicon-github.svg" alt="Github account" style="width:42px;height:42px">
+			</a>
+			<a href="https://www.linkedin.com/in/jmichaelmcgarr" target="_blank">
+			   <img src="img/webicon-linkedin.svg" alt="LinkedIn Profile" style="width:42px;height:42px">
+			</a>
+			<a href="https://plus.google.com/114285658743725894223/posts/p/pub" target="_blank">
+			   <img src="img/webicon-googleplus.svg" alt="Google+ Profile" style="width:42px;height:42px">
+			</a> -->
+		</div>
+	</div>
 
 <#include "footer.ftl">
-
-

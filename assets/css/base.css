@@ -36,6 +36,10 @@ body {
   }
 }
 
+img {
+  margin: 10px;
+}
+
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
@@ -47,14 +51,14 @@ body {
   margin: 20px 0;
 }
 
-/*code {
-  font-size: 80%;
-}*/
-
-.alignleft {
-  float: left;
-}
 .alignright {
   float: right;
 }
 
+.alignleft {
+  float: left;
+}
+
+/*code {
+  font-size: 80%;
+}*/
